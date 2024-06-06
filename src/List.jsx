@@ -4,7 +4,11 @@ const List = ({ people }) => {
   return (
     <div>
       {people.map((person) => {
-        return <Person key={person.id} {...person} />;
+        return (
+          <section key={person.id}>
+            <Person {...person} />
+          </section>
+        );
       })}
     </div>
   );
